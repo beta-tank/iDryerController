@@ -1,4 +1,4 @@
-﻿#ifndef CONFIGURATION_H
+#ifndef CONFIGURATION_H
 #define CONFIGURATION_H
 
 // При старте висит на заставке и пищит коротко(0,3с) - ошибка инициализации BME
@@ -118,7 +118,7 @@ temperature  sensor choice
 #define CRITICAL_OVERHEAT 5.0f   // Критическая температура (°C)
 
 #define TMP_MIN 1
-#define TMP_MAX 130
+#define TMP_MAX 115
 #define TMP_SAFETY_THRESHOLD 10
 #define HUMIDITY_HYSTERESIS 5
 #define TEMP_HYSTERESIS 5
