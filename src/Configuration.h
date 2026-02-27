@@ -1,6 +1,8 @@
 #ifndef CONFIGURATION_H
 #define CONFIGURATION_H
 
+// C:\Users\beta\.platformio\penv\Scripts\platformio.exe run -e EEP -t fullclean -t uploadeep -t upload                                                                                                                                                                                               
+
 // При старте висит на заставке и пищит коротко(0,3с) - ошибка инициализации BME
 // При старте висит на заставке и пищит продолжительно(1с) - ошибка температуры с термистора
 
@@ -107,7 +109,7 @@ temperature  sensor choice
 1 BME280
 2 SHT31
  ***************************/
-#define SENSOR_TYPE 1
+#define SENSOR_TYPE 2
 
 /***************************
 Пороговые значения для температурных фаз
@@ -118,7 +120,7 @@ temperature  sensor choice
 #define CRITICAL_OVERHEAT 5.0f   // Критическая температура (°C)
 
 #define TMP_MIN 1
-#define TMP_MAX 115
+#define TMP_MAX 120
 #define TMP_SAFETY_THRESHOLD 10
 #define HUMIDITY_HYSTERESIS 5
 #define TEMP_HYSTERESIS 5
@@ -168,12 +170,12 @@ aprox 1min per attempt
 Manual PID setup
 if OVERWRITE_PID - 0, pid, after burning, will be default
  **********************/
-#define OVERWRITE_PID 0
-#define K_PROPRTIONAL 20     //
-#define K_INTEGRAL 1         //
-#define K_DERIVATIVE 40      //
-#define K_FILTER 40          //
-#define K_MIN_DELTA_TIME 300 //
+#define OVERWRITE_PID 1
+#define K_PROPRTIONAL 7     //
+#define K_INTEGRAL 13         //
+#define K_DERIVATIVE 111      //
+#define K_FILTER 333          //
+#define K_MIN_DELTA_TIME 333 //
 /*********************
 Pid type
 P_ON_M specifies that Proportional on Measurement be used
@@ -266,7 +268,7 @@ if your SCALES_MODULE_NUM not 0 do this:
    6 pio run -e EEP -t fullclean -t upload
  ********************/
 #define AUTOPID_RUN 0
-#define SCALES_MODULE_NUM 0
+#define SCALES_MODULE_NUM 2
 
 #define FILAMENT_SENSOR_ON                   //
 #define ALERT_MASS 100                       // Beep by buzzer when less than this amount of filament left
